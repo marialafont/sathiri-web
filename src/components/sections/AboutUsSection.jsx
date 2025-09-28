@@ -1,7 +1,7 @@
 import aboutImage from '../../assets/images/about.jpeg'
 import { Button } from '../../components/ui'
 
-const AboutSection = () => {
+const AboutUsSection = () => {
   return (
     <section id="sobre-nosotros" className="section-padding bg-background">
       <div className="main-container">
@@ -39,4 +39,4 @@ const AboutSection = () => {
   )
 }
 
-export { AboutSection }
+export { AboutUsSection }
