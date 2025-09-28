@@ -70,7 +70,7 @@ const Navbar = () => {
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
     >
-      <div className="container">
+      <div className="main-container">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between items-center justify-center h-auto py-4 md:h-20 md:py-0">
           <div className="flex flex-col md:flex-row md:items-center items-center space-y-4 md:space-y-0 md:space-x-16">
             <Link
@@ -94,7 +94,7 @@ const Navbar = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] md:text-sm font-medium text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[10px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
                     >
                       {item.name}
                     </a>
@@ -105,7 +105,7 @@ const Navbar = () => {
                       key={item.name}
                       to="/"
                       onClick={e => handleLinkClick(e, item.href)}
-                      className="text-[10px] md:text-sm font-medium text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[10px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
                     >
                       {item.name}
                     </Link>
@@ -150,4 +150,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export { Navbar }
