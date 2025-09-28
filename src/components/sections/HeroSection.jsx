@@ -1,4 +1,5 @@
 import heroVideo from '../../assets/videos/hero-video.mp4'
+import { Button } from '../ui'
 
 const HeroSection = () => {
   return (
@@ -18,24 +19,23 @@ const HeroSection = () => {
 
       <div className="relative z-10 flex items-center justify-center h-full -mt-16">
         <div className="text-center text-white main-container">
-          <h1 className="title text-white mb-4">
-            SOMBREROS HECHOS A MANO
-            <br />
-            EN ARGENTINA
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-semibold leading-tight lg:leading-snug tracking-wider text-white mb-4 w-full md:w-[70%] mx-auto">
+            SOMBREROS HECHOS A MANO EN ARGENTINA
           </h1>
 
           <p className="text text-white/90 max-w-2xl mx-auto mb-8">
             Amamos lo que hacemos y lo reflejamos en cada pieza de arte
           </p>
 
-          <a
+          <Button
+            as="a"
             href="https://www.sathirihats.com.ar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="button-secondary text-white"
+            variant="secondary"
           >
             Tienda Online
-          </a>
+          </Button>
         </div>
       </div>
     </section>

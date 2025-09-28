@@ -15,7 +15,7 @@
     --card-foreground: 220 13% 18%; /* #212b36 */
     --border: 0 0% 90%; /* #e5e5e5 */
     --input: 0 0% 90%; /* #e5e5e5 */
-    --primary: 40 24% 80%; /* #e1d3b7 beige */
+    --primary: 40 35% 70%; /* #e1d3b7 beige */
     --primary-foreground: 0 0% 100%; /* #ffffff */
     --secondary: 0 0% 96%; /* #f4f4f4 */
     --secondary-foreground: 220 13% 18%; /* #212b36 */
@@ -23,7 +23,7 @@
     --accent-foreground: 220 13% 18%; /* #212b36 */
     --destructive: 0 84% 60%; /* #ef4444 */
     --destructive-foreground: 0 0% 98%; /* #fafafa */
-    --ring: 40 24% 80%; /* #e1d3b7 beige */
+    --ring: 40 35% 70%; /* #e1d3b7 beige */
     --radius: 5px;
   }
 }
@@ -71,14 +71,6 @@
 
   .section-title {
     @apply font-serif font-semibold leading-tight text-foreground tracking-wider text-3xl md:text-4xl lg:text-5xl;
-  }
-
-  .button-primary {
-    @apply inline-flex h-10 items-center justify-center rounded bg-primary px-8 py-2 text-sm font-medium text-primary-foreground tracking-wider;
-  }
-
-  .button-secondary {
-    @apply inline-flex h-10 items-center justify-center rounded border bg-transparent px-8 py-2 text-sm font-medium text-white tracking-wider border-white;
   }
 
   .link-hover {
