@@ -13,10 +13,11 @@ function App() {
           <section className="min-h-screen bg-background flex items-center justify-center section-padding">
             <div className="main-container">
               <h2 className="section-title text-center mb-8">
-                Sección de prueba
+                Estamos preparando algo especial
               </h2>
               <p className="text text-center">
-                Contenido temporal para scroll...
+                Como nuestros sombreros, esta sección se está creando con
+                cuidado
               </p>
             </div>
           </section>
