@@ -1,6 +1,10 @@
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Navbar } from './components/common'
-import { HeroSection, AboutUsSection } from './components/sections'
+import {
+  HeroSection,
+  AboutUsSection,
+  GallerySection,
+} from './components/sections'
 
 function App() {
   return (
@@ -9,7 +13,7 @@ function App() {
         <Navbar />
         <HeroSection />
         <AboutUsSection />
-
+        <GallerySection />
         <main>
           <section className="bg-background flex items-center justify-center section-padding">
             <div className="main-container">
