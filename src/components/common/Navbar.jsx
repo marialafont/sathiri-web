@@ -5,7 +5,7 @@ import logoImage from '../../assets/images/sathiri-logo.png'
 import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
 
 const Navbar = () => {
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
 
   const navigation = [
@@ -22,12 +22,17 @@ const Navbar = () => {
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY && window.scrollY > 100) {
-          setIsVisible(false)
-        } else {
+        const currentScrollY = window.scrollY
+
+        if (currentScrollY < lastScrollY && currentScrollY > 100) {
           setIsVisible(true)
+        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+          setIsVisible(false)
+        } else if (currentScrollY <= 100 && currentScrollY > lastScrollY) {
+          setIsVisible(false)
         }
-        setLastScrollY(window.scrollY)
+
+        setLastScrollY(currentScrollY)
       }
     }
 
@@ -62,8 +67,8 @@ const Navbar = () => {
 
   return (
     <Motion.header
-      className="w-full bg-white/95 backdrop-blur-sm sticky top-0 z-50"
-      initial={{ y: 0 }}
+      className="w-full bg-white/95 backdrop-blur-sm fixed top-0 z-50"
+      initial={{ y: -120 }}
       animate={{ y: isVisible ? 0 : -120 }}
       transition={{
         duration: 0.6,
