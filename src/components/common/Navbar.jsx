@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion as Motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import logoImage from '../../assets/images/sathiri-logo.png'
-import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
+import { SiInstagram, SiFacebook, SiTiktok } from 'react-icons/si'
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -86,7 +86,7 @@ const Navbar = () => {
               <img
                 src={logoImage}
                 alt="Sathiri"
-                className="h-10 md:h-14 w-auto"
+                className="h-12 md:h-14 w-auto"
               />
             </Link>
 
@@ -99,7 +99,7 @@ const Navbar = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[10px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[12px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
                     >
                       {item.name}
                     </a>
@@ -110,7 +110,7 @@ const Navbar = () => {
                       key={item.name}
                       to="/"
                       onClick={e => handleLinkClick(e, item.href)}
-                      className="text-[10px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[12px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
                     >
                       {item.name}
                     </Link>
@@ -120,33 +120,33 @@ const Navbar = () => {
             </nav>
           </div>
 
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2">
             <a
               href="https://instagram.com/sathirihats"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-foreground/60 hover:text-foreground link-hover"
+              className="p-2 text-foreground/60 hover:text-foreground link-hover flex items-center justify-center"
               aria-label="Instagram"
             >
-              <FaInstagram className="h-5 w-5" />
-            </a>
-            <a
-              href="https://facebook.com/sathirihats"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-foreground/60 hover:text-foreground link-hover"
-              aria-label="Facebook"
-            >
-              <FaFacebook className="h-5 w-5" />
+              <SiInstagram className="h-4 w-4" />
             </a>
             <a
               href="https://tiktok.com/@sathirihats"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 text-foreground/60 hover:text-foreground link-hover"
+              className="p-2 text-foreground/60 hover:text-foreground link-hover flex items-center justify-center"
               aria-label="TikTok"
             >
-              <FaTiktok className="h-5 w-5" />
+              <SiTiktok className="h-4 w-4" />
+            </a>
+            <a
+              href="https://facebook.com/sathirihats"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 text-foreground/60 hover:text-foreground link-hover flex items-center justify-center"
+              aria-label="Facebook"
+            >
+              <SiFacebook className="h-4 w-4" />
             </a>
           </div>
         </div>

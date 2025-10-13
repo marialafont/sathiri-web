@@ -15,7 +15,7 @@ const HeroSection = () => {
         Tu navegador no soporta videos HTML5.
       </video>
 
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/20" />
 
       <div className="relative z-10 flex items-center justify-center h-full -mt-16">
         <div className="text-center text-white main-container">
