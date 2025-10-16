@@ -6,6 +6,7 @@ import {
   GallerySection,
   ContactSection,
   StatementSection,
+  CustomSection,
 } from './components/sections'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <GallerySection />
         <ContactSection />
         <StatementSection />
+        <CustomSection />
         <main>
           <section className="bg-background flex items-center justify-center section-padding">
             <div className="main-container">
