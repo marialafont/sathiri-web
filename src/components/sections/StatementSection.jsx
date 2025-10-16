@@ -2,7 +2,7 @@ import statementImage from '../../assets/images/statement.jpeg'
 
 const StatementSection = () => {
   return (
-    <section className="relative w-full h-[400px] lg:h-[450px] overflow-hidden pt-16 md:pt-24 lg:pt-32">
+    <section className="relative w-full h-[400px] lg:h-[450px] overflow-hidden">
       <div className="absolute inset-0">
         <img
           src={statementImage}
