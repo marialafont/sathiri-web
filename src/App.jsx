@@ -1,5 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom'
-import { Navbar } from './components/common'
+import { Navbar, Footer } from './components/common'
 import {
   HeroSection,
   AboutUsSection,
@@ -15,26 +15,16 @@ function App() {
     <Router>
       <div className="min-h-screen bg-background text-foreground scrollbar-hide">
         <Navbar />
-        <HeroSection />
-        <AboutUsSection />
-        <GallerySection />
-        <ContactSection />
-        <StatementSection />
-        <CustomSection />
-        <NewsletterSection />
         <main>
-          <section className="bg-background flex items-center justify-center section-padding">
-            <div className="main-container">
-              <h2 className="section-title text-center mb-8">
-                Estamos preparando algo especial
-              </h2>
-              <p className="text text-center">
-                Como nuestros sombreros, esta sección se está creando con
-                cuidado...
-              </p>
-            </div>
-          </section>
+          <HeroSection />
+          <AboutUsSection />
+          <CustomSection />
+          <GallerySection />
+          <StatementSection />
+          <ContactSection />
+          <NewsletterSection />
         </main>
+        <Footer />
       </div>
     </Router>
   )
