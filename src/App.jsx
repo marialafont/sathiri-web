@@ -5,6 +5,7 @@ import {
   AboutUsSection,
   GallerySection,
   ContactSection,
+  StatementSection,
 } from './components/sections'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <AboutUsSection />
         <GallerySection />
         <ContactSection />
+        <StatementSection />
         <main>
           <section className="bg-background flex items-center justify-center section-padding">
             <div className="main-container">
