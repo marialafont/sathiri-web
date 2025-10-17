@@ -30,7 +30,7 @@ const GallerySection = () => {
   }
 
   return (
-    <section id="galeria" className="bg-background pb-16 md:pb-24 lg:pb-32">
+    <section id="galeria" className="bg-background pb-16 md:pb-24 lg:pb-36">
       <div className="main-container">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {visibleImages.map(image => (

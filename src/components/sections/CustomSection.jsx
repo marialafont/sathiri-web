@@ -3,7 +3,7 @@ import { Button } from '../ui'
 
 const CustomSection = () => {
   return (
-    <section id="custom" className="section-padding bg-background">
+    <section id="custom" className="pb-16 md:pb-24 lg:pb-36 bg-background">
       <div className="main-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
