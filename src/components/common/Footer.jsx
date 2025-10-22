@@ -35,7 +35,7 @@ const Footer = () => {
     <footer className="bg-background py-12 md:py-16">
       <div className="main-container">
         <div className="flex flex-col items-center space-y-8">
-          <div className="flex flex-col md:flex-row items-center md:justify-center md:space-x-8 space-y-4 md:space-y-0 order-2 md:order-1">
+          <div className="flex flex-col md:flex-row items-center md:justify-center md:space-x-8 space-y-4 md:space-y-0 order-2 md:order-1 pt-4 md:pt-0">
             {navigation.map(item => {
               if (item.external) {
                 return (
