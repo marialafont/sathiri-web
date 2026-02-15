@@ -6,7 +6,7 @@ const AboutUsSection = () => {
     <section id="sobre-nosotros" className="section-padding bg-background">
       <div className="main-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 text-center lg:text-left">
             <h2 className="section-title">
               SATHIRI, SOMBREROS
               <br />
