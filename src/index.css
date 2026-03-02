@@ -54,7 +54,7 @@
 
 @layer components {
   .section-padding {
-    @apply py-16 md:py-24 lg:py-36;
+    @apply py-16 md:py-28 lg:py-48;
   }
 
   .main-container {

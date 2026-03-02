@@ -15,13 +15,15 @@ const AboutUsSection = () => {
               EMOCIONES
             </h2>
 
-            <p className="text leading-relaxed max-w-lg">
+            <p className="text leading-relaxed max-w-lg mx-auto lg:mx-0">
               Fusionando una selección minuciosa de materiales de la más alta
               calidad y las manos mágicas de nuestros artesanos argentinos nace
               Sathiri.
             </p>
 
-            <Button variant="primary">Sobre nosotros</Button>
+            <div className="pt-2 pb-6 lg:py-0">
+              <Button variant="primary">Sobre nosotros</Button>
+            </div>
           </div>
 
           <div className="relative">

@@ -37,15 +37,17 @@ const CustomSection = () => {
               </p>
             </div>
 
-            <Button
-              as="a"
-              href="https://wa.me/5491127046922"
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="primary"
-            >
-              Contáctanos
-            </Button>
+            <div className="pt-2 pb-6 lg:py-0">
+              <Button
+                as="a"
+                href="https://wa.me/5491127046922"
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="primary"
+              >
+                Contáctanos
+              </Button>
+            </div>
           </div>
         </div>
       </div>
