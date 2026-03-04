@@ -1,8 +1,20 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import logoImage from '../../assets/images/sathiri-logo.png'
-import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa'
+import { FaInstagram, FaFacebook } from 'react-icons/fa'
 
 const Footer = () => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const handleHomeClick = e => {
+    e.preventDefault()
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/')
+    }
+  }
+
   const navigation = [
     { name: 'Inicio', href: '#inicio' },
     {
@@ -10,16 +22,16 @@ const Footer = () => {
       href: 'https://www.sathirihats.com.ar/',
       external: true,
     },
-    { name: 'Sobre nosotros', href: '#sobre-nosotros' },
+    { name: 'Personalizados', href: '#custom' },
+    { name: 'Sathiri', href: '/about-us', isRoute: true },
     { name: 'Contacto', href: '#contacto' },
-    { name: 'Custom', href: '#custom' },
   ]
 
   const handleLinkClick = (e, href) => {
     e.preventDefault()
 
     if (href === '#inicio') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      handleHomeClick(e)
       return
     }
 
@@ -48,6 +60,16 @@ const Footer = () => {
                   >
                     {item.name}
                   </a>
+                )
+              } else if (item.isRoute) {
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className="text-sm text-foreground hover:text-foreground/70 transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 )
               } else {
                 return (
@@ -89,15 +111,6 @@ const Footer = () => {
                 aria-label="Facebook"
               >
                 <FaFacebook className="h-6 w-6" />
-              </a>
-              <a
-                href="https://tiktok.com/@sathirihats"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-foreground/70 transition-colors"
-                aria-label="TikTok"
-              >
-                <FaTiktok className="h-6 w-6" />
               </a>
             </div>
           </div>

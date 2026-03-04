@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import aboutImage from '../../assets/images/about.jpeg'
 import { Button } from '../../components/ui'
 
@@ -22,7 +23,7 @@ const AboutUsSection = () => {
             </p>
 
             <div className="pt-2 pb-6 lg:py-0">
-              <Button variant="primary">Sobre nosotros</Button>
+              <Button as={Link} to="/about-us" variant="primary">Sobre Sathiri</Button>
             </div>
           </div>
 

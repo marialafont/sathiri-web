@@ -23,7 +23,7 @@ const HeroSection = () => {
             SOMBREROS HECHOS A MANO EN ARGENTINA
           </h1>
 
-          <p className="text text-white/90 max-w-2xl mx-auto mb-8">
+          <p className="text-base md:text-[18px] lg:text-[20px] text-white/90 max-w-2xl mx-auto mb-8">
             Amamos lo que hacemos y lo reflejamos en cada pieza de arte
           </p>
 

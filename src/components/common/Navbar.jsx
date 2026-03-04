@@ -1,21 +1,22 @@
 import { useState, useEffect } from 'react'
 import { motion as Motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import logoImage from '../../assets/images/sathiri-logo.png'
-import { SiInstagram, SiFacebook, SiTiktok } from 'react-icons/si'
+import { SiInstagram, SiFacebook } from 'react-icons/si'
 
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
 
   const navigation = [
+    { name: 'Inicio', href: '#inicio', external: false },
     {
       name: 'Tienda online',
       href: 'https://www.sathirihats.com.ar/',
       external: true,
     },
-    { name: 'Custom', href: '#custom', external: false },
-    { name: 'Sobre Nosotros', href: '#sobre-nosotros', external: false },
+    { name: 'Personalizados', href: '#custom', external: false },
+    { name: 'Sathiri', href: '/about-us', external: false, isRoute: true },
     { name: 'Contacto', href: '#contacto', external: false },
   ]
 
@@ -48,7 +49,7 @@ const Navbar = () => {
     e.preventDefault()
 
     if (href === '#inicio') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      handleHomeClick(e)
       return
     }
 
@@ -60,9 +61,20 @@ const Navbar = () => {
     }
   }
 
-  const handleLogoClick = e => {
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    setIsVisible(location.pathname !== '/')
+  }, [location.pathname])
+
+  const handleHomeClick = e => {
     e.preventDefault()
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/')
+    }
   }
 
   return (
@@ -80,7 +92,7 @@ const Navbar = () => {
           <div className="flex flex-col md:flex-row md:items-center items-center space-y-4 md:space-y-0 md:space-x-16">
             <Link
               to="/"
-              onClick={handleLogoClick}
+              onClick={handleHomeClick}
               className="hover:opacity-80 transition-opacity flex-shrink-0"
             >
               <img
@@ -90,7 +102,7 @@ const Navbar = () => {
               />
             </Link>
 
-            <nav className="flex items-center space-x-6 md:space-x-8">
+            <nav className="flex items-center space-x-4 md:space-x-8">
               {navigation.map(item => {
                 if (item.external) {
                   return (
@@ -99,10 +111,20 @@ const Navbar = () => {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[12px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[11px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover whitespace-nowrap"
                     >
                       {item.name}
                     </a>
+                  )
+                } else if (item.isRoute) {
+                  return (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className="text-[11px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover whitespace-nowrap"
+                    >
+                      {item.name}
+                    </Link>
                   )
                 } else {
                   return (
@@ -110,7 +132,7 @@ const Navbar = () => {
                       key={item.name}
                       to="/"
                       onClick={e => handleLinkClick(e, item.href)}
-                      className="text-[12px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover"
+                      className="text-[11px] md:text-sm font-normal text-foreground/70 hover:text-foreground link-hover whitespace-nowrap"
                     >
                       {item.name}
                     </Link>
@@ -129,15 +151,6 @@ const Navbar = () => {
               aria-label="Instagram"
             >
               <SiInstagram className="h-4 w-4" />
-            </a>
-            <a
-              href="https://tiktok.com/@sathirihats"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-foreground/60 hover:text-foreground link-hover flex items-center justify-center"
-              aria-label="TikTok"
-            >
-              <SiTiktok className="h-4 w-4" />
             </a>
             <a
               href="https://facebook.com/sathirihats"
