@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion as Motion } from 'framer-motion'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import logoImage from '../../assets/images/sathiri-logo.png'
+import SathiriLogo from '../../assets/images/sathiri-logo.svg?react'
 import { SiInstagram, SiFacebook } from 'react-icons/si'
 
 const Navbar = () => {
@@ -93,10 +93,9 @@ const Navbar = () => {
               onClick={handleHomeClick}
               className="hover:opacity-80 transition-opacity flex-shrink-0"
             >
-              <img
-                src={logoImage}
-                alt="Sathiri"
-                className="h-12 md:h-14 w-auto"
+              <SathiriLogo
+                aria-label="Sathiri"
+                className="h-12 md:h-14 w-auto text-foreground"
               />
             </Link>
 

@@ -1,6 +1,6 @@
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import logoImage from '../../assets/images/sathiri-logo.png'
-import { FaInstagram, FaFacebook } from 'react-icons/fa'
+import SathiriLogo from '../../assets/images/sathiri-logo.svg?react'
+import { SiInstagram, SiFacebook } from 'react-icons/si'
 
 const Footer = () => {
   const navigate = useNavigate()
@@ -87,10 +87,9 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col items-center space-y-6 order-1 md:order-2">
-            <img
-              src={logoImage}
-              alt="Sathiri"
-              className="h-20 md:h-24 w-auto"
+            <SathiriLogo
+              aria-label="Sathiri"
+              className="h-20 md:h-24 w-auto text-foreground"
             />
 
             <div className="flex items-center space-x-6">
@@ -98,19 +97,19 @@ const Footer = () => {
                 href="https://instagram.com/sathiri_hats"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-foreground/70 transition-colors"
+                className="inline-flex items-center text-foreground hover:text-foreground/70 transition-colors"
                 aria-label="Instagram"
               >
-                <FaInstagram className="h-6 w-6" />
+                <SiInstagram className="h-6 w-6" />
               </a>
               <a
                 href="https://facebook.com/sathirihats"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-foreground/70 transition-colors"
+                className="inline-flex items-center text-foreground hover:text-foreground/70 transition-colors"
                 aria-label="Facebook"
               >
-                <FaFacebook className="h-6 w-6" />
+                <SiFacebook className="h-6 w-6" />
               </a>
             </div>
           </div>
