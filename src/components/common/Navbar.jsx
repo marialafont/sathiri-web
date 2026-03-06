@@ -142,7 +142,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-2">
             <a
-              href="https://instagram.com/sathirihats"
+              href="https://instagram.com/sathiri_hats"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 text-foreground/60 hover:text-foreground link-hover flex items-center justify-center"

@@ -95,7 +95,7 @@ const Footer = () => {
 
             <div className="flex items-center space-x-6">
               <a
-                href="https://instagram.com/sathirihats"
+                href="https://instagram.com/sathiri_hats"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-foreground hover:text-foreground/70 transition-colors"
