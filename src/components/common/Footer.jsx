@@ -117,7 +117,7 @@ const Footer = () => {
 
           <div className="text-center order-3">
             <p className="text-xs text-foreground/70">
-              © 2025, Sathiri Hats. Todos los derechos reservados.
+              © 2026, Sathiri Hats. Todos los derechos reservados.
             </p>
           </div>
         </div>

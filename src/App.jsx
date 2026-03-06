@@ -9,6 +9,7 @@ import {
   StatementSection,
   CustomSection,
   NewsletterSection,
+  QuoteSection,
 } from './components/sections'
 import AboutUsPage from './pages/AboutUsPage'
 
@@ -43,6 +44,7 @@ function AppRoutes() {
                 <HeroSection />
                 <AboutUsSection />
                 <CustomSection />
+                <QuoteSection />
                 <GallerySection />
                 <StatementSection />
                 <ContactSection />

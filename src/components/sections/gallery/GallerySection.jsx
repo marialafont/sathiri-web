@@ -41,15 +41,18 @@ const GallerySection = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {visibleImages.map((image, index) => {
             const isNew = index >= prevCountRef.current
-            const delay = isNew ? (index - prevCountRef.current) * 0.07 : 0
+            const newIndex = index - prevCountRef.current
+            const columns = window.innerWidth < 768 ? 2 : window.innerWidth < 1024 ? 3 : 4
+            const row = Math.floor(newIndex / columns)
+            const delay = isNew ? row * 0.15 + (newIndex % columns) * 0.07 : 0
 
             return (
               <MotionDiv
                 key={image.id}
                 className="aspect-square overflow-hidden rounded cursor-pointer"
-                initial={isNew ? { opacity: 0, y: 18 } : false}
+                initial={isNew ? { opacity: 0, y: 24 } : false}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.45, delay, ease: [0.25, 0.1, 0.25, 1] }}
+                transition={{ duration: 0.65, delay, ease: [0.25, 0.1, 0.25, 1] }}
                 onClick={() => setSelectedImage(image)}
               >
                 <img

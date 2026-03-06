@@ -7,6 +7,8 @@ import { SiInstagram, SiFacebook } from 'react-icons/si'
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   const navigation = [
     { name: 'Inicio', href: '#inicio', external: false },
@@ -23,13 +25,12 @@ const Navbar = () => {
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
+        const isHome = location.pathname === '/'
         const currentScrollY = window.scrollY
 
-        if (currentScrollY < lastScrollY && currentScrollY > 100) {
-          setIsVisible(true)
-        } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-          setIsVisible(false)
-        } else if (currentScrollY <= 100 && currentScrollY > lastScrollY) {
+        if (currentScrollY < lastScrollY) {
+          setIsVisible(!isHome || currentScrollY > 100)
+        } else if (currentScrollY > lastScrollY) {
           setIsVisible(false)
         }
 
@@ -43,7 +44,7 @@ const Navbar = () => {
         window.removeEventListener('scroll', controlNavbar)
       }
     }
-  }, [lastScrollY])
+  }, [lastScrollY, location.pathname])
 
   const handleLinkClick = (e, href) => {
     e.preventDefault()
@@ -60,9 +61,6 @@ const Navbar = () => {
       window.scrollTo({ top: elementPosition, behavior: 'smooth' })
     }
   }
-
-  const navigate = useNavigate()
-  const location = useLocation()
 
   useEffect(() => {
     setIsVisible(location.pathname !== '/')

@@ -49,7 +49,7 @@ const AboutUsPage = () => {
         </div>
       </section>
 
-      <section className="pb-16 md:pb-28 lg:pb-48 bg-background">
+      <section className="section-padding bg-white">
         <div className="main-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
