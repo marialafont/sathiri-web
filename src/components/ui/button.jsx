@@ -7,7 +7,7 @@ const Button = forwardRef(
 
     const variants = {
       primary: 'bg-primary text-primary-foreground',
-      secondary: 'bg-transparent border border-white text-white',
+      secondary: 'bg-transparent border-2 border-white text-white',
       outline: 'border border-input bg-background',
       ghost: 'bg-transparent',
     }

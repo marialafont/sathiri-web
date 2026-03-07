@@ -18,7 +18,7 @@ const ContactSection = () => {
                   <p className="text-xl md:text-2xl font-serif font-medium">
                     Capital Federal
                   </p>
-                  <p className="text-xl md:text-2xl font-serif font-medium">
+                  <p className="text-xl md:text-2xl font-serif font-light italic">
                     Palermo Soho
                   </p>
                   <p className="text mt-4">sathirihats@gmail.com</p>

@@ -33,6 +33,7 @@ const HeroSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             variant="secondary"
+            className="font-semibold"
           >
             Tienda Online
           </Button>
